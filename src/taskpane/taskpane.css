@@ -1,0 +1,169 @@
+/* Style global */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FAF4ED; 
+    font-family: 'Elizeth', sans-serif;
+    color: #333;
+}
+
+/* En-tête */
+.gw-header {
+    display: flex;
+    justify-content: center; /* Centre le logo */
+    align-items: center;
+    padding: 20px 0;
+    background-color: #ECE5DD;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.gw-logo {
+    width: 230px; /* Logo plus gros */
+    height: 230px;
+    border-radius: 30px;
+}
+
+/* Conteneur principal */
+.gw-container {
+    padding: 20px;
+}
+
+/* Zone de chargement */
+.gw-load-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.gw-file-input {
+    flex: 1;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.gw-button {
+    background-color: #E2DBC8;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+.gw-button:hover {
+    background-color: #D3CAB3;
+}
+
+/* Barre de recherche */
+.gw-search {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.gw-search-results {
+    margin-bottom: 20px;
+}
+.result-button {
+    display: block;
+    width: 100%; /* Même largeur */
+    padding: 8px;
+    margin: 5px 0;
+    background-color: #f8f4ef;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+.result-button:hover {
+    background-color: #ede4da;
+}
+.no-results {
+    font-style: italic;
+    color: #888;
+}
+
+/* Sous-titre */
+.gw-subtitle {
+    margin: 0 0 10px;
+}
+
+/* Accordéon - Catégories */
+.category-header {
+    background-color: #50495A;
+    color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-weight: normal;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+.category-header:hover {
+    background-color: #46404F;
+}
+.category-header .arrow {
+    margin-left: 10px;
+    transition: transform 0.2s ease; /* Pour l'animation de rotation */
+}
+.category-content {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+/* Accordéon - Sous-catégories */
+.subcategory-header {
+    background-color: #D9D2BF;
+    padding: 8px;
+    margin: 5px 0 0 10px;
+    font-weight: normal;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+.subcategory-header:hover {
+    background-color: #C8C1AE;
+}
+.subcategory-header .arrow {
+    margin-left: 10px;
+    transition: transform 0.2s ease; /* Pour l'animation de rotation */
+}
+.subcategory-content {
+    margin-left: 20px;
+    display: none;
+}
+/* Boutons de phrases */
+.phrase-button {
+    display: block;
+    width: 100%; /* Même largeur pour chaque bouton */
+    margin: 5px 0;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+    background-color: #f8f4ef;
+}
+.phrase-button:hover {
+    background-color: #ede4da;
+}
+
+/* Couleurs spéciales Bon / Mauvais */
+.phrase-button.bon {
+    background-color: #BFEDC6;
+}
+.phrase-button.bon:hover {
+    background-color: #A7DFAF; /* un peu plus foncé */
+}
+.phrase-button.mauvais {
+    background-color: #FFC2C3;
+}
+.phrase-button.mauvais:hover {
+    background-color: #F5B4B5; /* un peu plus foncé */
+}

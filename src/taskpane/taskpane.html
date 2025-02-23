@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Ghostwriter</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Elizeth&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="taskpane.css" />
+</head>
+<body>
+    <header class="gw-header">
+        <img src="C:\Users\Elodie\Pictures\Ghostwriter_Logo.png" alt="Ghostwriter Logo" class="gw-logo" />
+    </header>
+
+    <div class="gw-container">
+        <div class="gw-load-section">
+            <label for="fileInput">fileInput</label> <input type="file" id="fileInput" accept=".xlsx" class="gw-file-input" />
+            <button id="loadButton" class="gw-button">Charger le fichier</button>
+        </div>
+
+        <input type="text" id="searchInput" placeholder="Rechercher une phrase..." class="gw-search" />
+        <div id="search-results" class="gw-search-results"></div>
+
+        <h2 class="gw-subtitle">Menu des Phrases</h2>
+        <div id="menu-container"></div>
+    </div>
+
+    <script src="taskpane.js"></script>
+</body>
+</html>
