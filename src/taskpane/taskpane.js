@@ -158,10 +158,17 @@ function searchPhrases() {
   const query = document.getElementById("searchInput").value.toLowerCase().trim();
   const resultsContainer = document.getElementById("search-results");
   resultsContainer.innerHTML = "";
+
   if (!query) return;
 
   const words = query.split(/\s+/);
-  const results = phrasesData.filter((item) => words.every((w) => item.text.toLowerCase().includes(w)));
+
+  // Filtrer les résultats basés sur le texte ET le titre
+  const results = phrasesData.filter((item) =>
+    words.every(
+      (w) => item.text.toLowerCase().includes(w) || item.title.toLowerCase().includes(w) // 🔍 Recherche aussi dans les titres
+    )
+  );
 
   if (!results.length) {
     resultsContainer.innerHTML = '<p class="no-results">Aucun résultat trouvé</p>';
@@ -171,6 +178,7 @@ function searchPhrases() {
       btn.className = "result-button";
       let displayTitle = item.title;
 
+      // Appliquer les styles selon l'avis
       if (item.avis === "Bon") {
         displayTitle = "✅ " + displayTitle;
         btn.style.backgroundColor = "#BFEDC6";
@@ -190,6 +198,7 @@ function searchPhrases() {
           btn.style.backgroundColor = "#FFC2C3";
         };
       }
+
       btn.textContent = displayTitle;
       btn.onclick = () => insertPhraseInWord(item.text);
       resultsContainer.appendChild(btn);
@@ -215,7 +224,7 @@ function toggleCategory(headerElement, contentElement) {
 async function insertPhraseInWord(text) {
   await Word.run(async (context) => {
     const selection = context.document.getSelection();
-    selection.insertText(text, Word.InsertLocation.replace);
+    selection.insertText(text + "\n", Word.InsertLocation.replace);
     const range = selection.getRange(Word.RangeLocation.after);
     range.select();
     await context.sync();
