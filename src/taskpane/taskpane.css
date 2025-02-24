@@ -17,9 +17,9 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .gw-logo {
-    width: 230px; /* Logo plus gros */
-    height: 230px;
-    border-radius: 30px;
+    width: 150px; /* Logo plus gros */
+    height: 150px;
+    border-radius: 20px;
 }
 
 /* Conteneur principal */
@@ -90,12 +90,11 @@ body {
 
 /* Accordéon - Catégories */
 .category-header {
-    background-color: #50495A;
-    color: #fff;
+    background-color: #E2DBC8;
     padding: 10px;
     margin: 5px 0;
     cursor: pointer;
-    font-weight: normal;
+    font-weight: bold;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
@@ -103,7 +102,7 @@ body {
     transition: background-color 0.2s ease;
 }
 .category-header:hover {
-    background-color: #46404F;
+    background-color: #D3CAB3;
 }
 .category-header .arrow {
     margin-left: 10px;
@@ -118,25 +117,30 @@ body {
 .subcategory-header {
     background-color: #D9D2BF;
     padding: 8px;
-    margin: 5px 0 0 10px;
-    font-weight: normal;
+    margin: 5px 0;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
     align-items: center;
     transition: background-color 0.2s ease;
+    justify-content: space-between;
 }
 .subcategory-header:hover {
     background-color: #C8C1AE;
 }
+
+/* Place la flèche à droite */
 .subcategory-header .arrow {
     margin-left: 10px;
-    transition: transform 0.2s ease; /* Pour l'animation de rotation */
+    transition: transform 0.2s ease;
 }
+
 .subcategory-content {
     margin-left: 20px;
     display: none;
 }
+
 /* Boutons de phrases */
 .phrase-button {
     display: block;
@@ -167,3 +171,35 @@ body {
 .phrase-button.mauvais:hover {
     background-color: #F5B4B5; /* un peu plus foncé */
 }
+.category-header {
+  background-color: #4D4657; 
+  color: #fff; 
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+.category-header:hover {
+  background-color: #3e3948;
+}
+
+.subcategory-header {
+  background-color: #D9D2BF;
+  color: #333;
+  padding: 8px;
+  margin: 5px 0 0 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+.subcategory-header:hover {
+  background-color: #C8C1AE;
+}
+
